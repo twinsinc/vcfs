@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    h1 The number of the evidences is #{evidences.length}
+    each evidence in evidences
+      pre #{JSON.stringify(evidence, null, 4)}

@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    h1 The number of the officers is #{officers.length}
+    each officer in officers
+      pre #{JSON.stringify(officer, null, 4)}
