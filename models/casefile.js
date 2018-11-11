@@ -12,15 +12,15 @@ const CasefileSchema = new mongoose.Schema({
     }],
     suspects: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Officer'
+        ref: 'Suspect'
     }],
     evidences: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Officer'
+        ref: 'Evidence'
     }],
     witnesses: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Officer'
+        ref: 'Witness'
     }]
 })
 

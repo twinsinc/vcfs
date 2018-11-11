@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const WitnessSchema = new mongoose.Schema({
     name: String,
     statement: String
-    
 })
 
 module.exports = mongoose.model('Suspect', WitnessSchema)
