@@ -1,14 +1,15 @@
 const CasefileModel = require('../models/casefile')
 const OfficerModel = require('../models/officer')
+const EvidenceModel = require('../models/evidence')
 
 async function findAll() {
     return CasefileModel.find()
 }
 
-async function addAttendee(casefileId, officerId){
+async function addOfficer(casefileId, officerId){
     const casefile = await CasefileModel.findOne({ _id: casefileId})
     const officer = await OfficerModel.findOne({ _id: officerId})
-    casefile.attendees.push(officer)
+    casefile.officers.push(officer)
     await casefile.save()
     return casefile
 }
